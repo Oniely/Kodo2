@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900);
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: url("../img/wall.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(250, 250, 250, 0.99);
+  width: 600px;
+  height: 550px;
+  padding: 55px 40px 35px;
+  border: 1px solid #090909;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #090909;
+}
+main .container h1 {
+  font-size: 3em;
+  line-height: 3.2rem;
+  margin: 0;
+  font-weight: 600;
+  text-align: start;
+  align-self: flex-start;
+  color: #090909;
+  font-family: "League Spartan", sans-serif;
+}
+main .container span {
+  font-size: 1em;
+  text-align: start;
+  align-self: flex-start;
+  color: #090909;
+  margin: 5px 0 0 5px;
+  line-height: 18px;
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+}
+main .container .p_sign_in, main .container .p_sign_up {
+  font-size: 1em;
+  text-align: center;
+  font-family: "League Spartan", sans-serif;
+  margin-top: 18px;
+  color: #090909;
+}
+main .container .p_sign_in a, main .container .p_sign_up a {
+  text-decoration: none;
+}
+main .container .p_sign_up {
+  margin-top: 33px;
+}
+main .container .sign_up {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 300px;
+  gap: 20px;
+  margin-top: 20px;
+}
+main .container .sign_up div {
+  width: 100%;
+  height: 4rem;
+  grid-area: span 2/span 1;
+}
+main .container .sign_up div:nth-child(4) {
+  position: relative;
+}
+main .container .sign_up div:nth-child(3), main .container .sign_up div:nth-child(4), main .container .sign_up div:nth-child(5) {
+  grid-area: span 2/span 2;
+}
+main .container .sign_up div i {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+  -o-object-fit: contain;
+     object-fit: contain;
+  color: rgba(9, 9, 9, 0.9);
+}
+main .container .sign_up div i.active {
+  display: block;
+}
+main .container .sign_up div input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  background: #fafafa;
+  color: #090909;
+  padding: 0 20px;
+  border: 1px solid #090909;
+  border-radius: 15px;
+  font-family: "League Spartan", sans-serif;
+}
+main .container .sign_up div input[type=text]:focus,
+main .container .sign_up div input[type=password]:focus {
+  border: 2px;
+}
+main .container .sign_up div input[type=submit] {
+  background: #090909;
+  color: #fafafa;
+  cursor: pointer;
+}
+main .container .sign_up div input[type=submit]:hover {
+  background: rgba(9, 9, 9, 0.98);
+}
+main .container .sign_up div input[type=submit]:active {
+  background: #090909;
+}
+main .container .sign_in {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  height: 300px;
+  gap: 28px;
+  margin-top: 25px;
+}
+main .container .sign_in div {
+  width: 100%;
+  height: 5rem;
+  grid-area: span 1;
+}
+main .container .sign_in div:nth-child(2) {
+  position: relative;
+}
+main .container .sign_in div p {
+  z-index: 100;
+  color: black;
+}
+main .container .sign_in div i {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+  -o-object-fit: contain;
+     object-fit: contain;
+  color: rgba(9, 9, 9, 0.9);
+}
+main .container .sign_in div i.active {
+  display: block;
+}
+main .container .sign_in div input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  background: #fafafa;
+  color: #090909;
+  padding: 0 20px;
+  border: 1px solid #090909;
+  border-radius: 15px;
+  font-family: "League Spartan", sans-serif;
+}
+main .container .sign_in div input[type=text]:focus,
+main .container .sign_in div input[type=password]:focus {
+  border: 2px;
+}
+main .container .sign_in div input[type=submit] {
+  background: #090909;
+  color: #fafafa;
+  cursor: pointer;
+}
+main .container .sign_in div input[type=submit]:hover {
+  background: rgba(9, 9, 9, 0.98);
+}
+main .container .sign_in div input[type=submit]:active {
+  background: #090909;
+}
+main .container .error {
+  color: red;
+  padding: 0 10px;
+}/*# sourceMappingURL=index.css.map */
