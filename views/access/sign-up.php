@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="./script/password.js" defer></script>
+    <!-- password visibility -->
+    <script src=".../" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <h1>Create Account</h1>
             <span>Greetings! To get started, we ask that you <br> carefully enter your details. Thank you! </span>
 
-            <form action=<?=htmlspecialchars($_SERVER['PHP_SELF'])?> method="post" class="sign_up" name="sign_up">
+            <form action=<?= htmlspecialchars($_SERVER['PHP_SELF']) ?> method="post" class="sign_up" name="sign_up">
                 <div>
                     <input type="text" name="fname" id="fname" placeholder="First Name" required>
                 </div>
@@ -31,7 +32,7 @@
                     <input type="email" name="email" id="email" placeholder="Email Address" required>
                 </div>
                 <div class="passDiv">
-                    <input type="password" name="password" id="password" placeholder="Password" minlength="8" required/>
+                    <input type="password" name="password" id="password" placeholder="Password" minlength="8" required />
                     <i class="fa-solid fa-eye-slash active" id="invisible"></i>
                     <i class="fa-solid fa-eye" id="visible"></i>
                 </div>
@@ -43,9 +44,7 @@
         </div>
         <?php
 
-        // database connection
         require_once './includes/connection.php';
-        // hashing a password / encrypting
         require_once './includes/hash_password.php';
 
         if (isset($_POST['submit'])) {
