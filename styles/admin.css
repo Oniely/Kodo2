@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  height: 100%;
+  font-family: "League Spartan", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+.container aside {
+  width: 16rem;
+  height: 100%;
+  background: #4d44b5;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.container aside .logo {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 1.8rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container aside .logo .img_container {
+  width: 60px;
+  height: 45px;
+  background: #e6ebee;
+  border-radius: 50%;
+}
+.container aside .logo .img_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.container aside .logo h1 {
+  font-size: 1.7rem;
+  color: #e6ebee;
+}
+.container aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  gap: 15px;
+}
+.container aside ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: relative;
+}
+.container aside ul li i {
+  position: absolute;
+  color: #fff;
+  left: 1.3rem;
+}
+.container aside ul li a {
+  width: 100%;
+  text-decoration: none;
+  padding: 1.2rem 1rem 1.2rem 3.5rem;
+  color: #ffffff;
+}
+.container aside ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.container aside ul li a:active {
+  background: transparent;
+}
+.container aside ul li a.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+.container section {
+  width: calc(100% - 16rem);
+  height: 100%;
+  margin-left: 16rem;
+  display: flex;
+  flex-direction: column;
+  background: #e6ebee;
+  position: relative;
+}
+.container section header {
+  width: calc(100% - 16rem);
+  height: 4.5rem;
+  padding: 0 2rem;
+  background: #e6ebee;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.container section header div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container section header div h1 {
+  font-size: 1.6rem;
+  color: #101010;
+}
+.container section header div .button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+.container section header div .button_container button {
+  width: 40px;
+  height: 40px;
+  outline: 0;
+  border: 0;
+  background: #fff;
+  color: #606060;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container section header div .button_container button:nth-last-child(1) {
+  margin-left: 10px;
+}
+.container section header div .img_container {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+}
+.container section header div .img_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.container section main {
+  margin-top: 4.5rem;
+  width: 100%;
+  background: #e6ebee;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container section main .main_left {
+  width: 48rem;
+}
+.container section main .main_left .profile_card {
+  width: 100%;
+  height: 30rem;
+}
+.container section main .main_left .profile_card .top {
+  width: 100%;
+  height: 30%;
+  background: #4d44b5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+}
+.container section main .main_left .profile_card .top .orange {
+  position: absolute;
+  bottom: 0;
+  right: 2.5rem;
+  width: 16rem;
+  height: 7rem;
+  background: #fcc43e;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 10;
+}
+.container section main .main_left .profile_card .top .red {
+  position: absolute;
+  bottom: 0;
+  right: 18.3rem;
+  width: 6.5rem;
+  height: 3.7rem;
+  background: #fb7d5b;
+  border-top-left-radius: 20px;
+  z-index: 1;
+}
+.container section main .main_left .profile_card .bottom {
+  width: 100%;
+  height: 70%;
+  background: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 2rem;
+  position: relative;
+}
+.container section main .main_left .profile_card .bottom .img_container {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.container section main .main_left .profile_card .bottom .img_container img {
+  position: absolute;
+  top: -4rem;
+  z-index: 150;
+  width: 9rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.container section main .main_left .profile_card .bottom .img_container div {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 7rem;
+}
+.container section main .main_left .profile_card .bottom .img_container div h1 {
+  color: #303972;
+  font-weight: 600;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+.container section main .main_left .profile_card .bottom .img_container div span {
+  color: #4d44b5;
+  font-weight: 600;
+  font-size: 15px;
+}
+.container section main .main_left .profile_card .bottom .info_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 2rem;
+  row-gap: 20px;
+}
+.container section main .main_left .profile_card .bottom .info_container .info {
+  display: flex;
+  align-items: center;
+}
+.container section main .main_left .profile_card .bottom .info_container .info .icon {
+  width: 50px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.container section main .main_left .profile_card .bottom .info_container .info .icon i {
+  padding: 1rem;
+  border-radius: 50%;
+  background: #fb7d5b;
+  color: #f7f7f7;
+  font-size: 1.1rem;
+}
+.container section main .main_left .profile_card .bottom .info_container .info .desc {
+  padding-left: 10px;
+}
+.container section main .main_left .profile_card .bottom .info_container .info .desc span {
+  color: #909090;
+  font-size: 14px;
+  font-weight: 400;
+}
+.container section main .main_left .profile_card .bottom .info_container .info .desc h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 145x;
+  margin-bottom: 4px;
+  color: #303972;
+}
+.container section main .main_right {
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  padding: 0 0 0 1.8rem;
+  gap: 30px;
+}
+.container section main .main_right .schedule_details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 15px;
+  background: #fff;
+  border-radius: 5px;
+}
+.container section main .main_right .schedule_details h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #303972;
+}
+.container section main .main_right .schedule_details p {
+  font-size: 0.85rem;
+  color: #909090;
+  white-space: nowrap;
+}
+.container section main .main_right .subject {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  padding-left: 1.4rem;
+  background: #fff;
+  border-radius: 5px;
+  gap: 20px;
+  border-left: 5px solid #4d44b5;
+}
+.container section main .main_right .subject:nth-child(3) {
+  border-color: #fb7d5b;
+}
+.container section main .main_right .subject:nth-child(4) {
+  border-color: #fcc43e;
+}
+.container section main .main_right .subject .title {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.container section main .main_right .subject .title h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #303972;
+}
+.container section main .main_right .subject .title span {
+  font-size: 0.9rem;
+  color: #909090;
+}
+.container section main .main_right .subject .desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12rem;
+}
+.container section main .main_right .subject .desc .datetime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.container section main .main_right .subject .desc .datetime p {
+  font-size: 0.9rem;
+}
+.container section main .main_right .subject .desc .datetime p i {
+  width: 20px;
+  margin-right: 5px;
+  font-size: 1.1rem;
+}
+.container section main .main_right .subject .desc .datetime p .fa-calendar {
+  color: #fb7d5b;
+}
+.container section main .main_right .subject .desc .datetime p .fa-clock {
+  color: #fcc43e;
+}
+.container section main .main_right .subject .desc .img_container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.container section main .main_right .subject .desc .img_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}/*# sourceMappingURL=admin.css.map */
