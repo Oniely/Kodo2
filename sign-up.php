@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (isset($_SESSION['msg'])) {
+    $msg = $_SESSION['msg'];
+    session_destroy();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link rel="stylesheet" href="./styles/index.css">
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
-
-    <!-- password visibility -->
     <script src="./script/password.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -43,6 +49,7 @@
             </form>
             <p class="p_sign_up">Already have an account? <a href="./index.php" class="link-primary">Sign-in</a> </p>
         </div>
+        <?= @$msg ?>
         <?php
 
         require './includes/hash_password.php';
@@ -60,7 +67,7 @@
 
             while ($row = $result->fetch_assoc()) {
                 if ($email === $row['c_email']) {
-                    echo "<span class='error'>Account already exists</span>";
+                    echo "<span id='err'>Account already exists</span>";
                     die();
                 }
             }
@@ -70,8 +77,8 @@
             $sql = "INSERT INTO customer_acc_tbl (c_fname, c_lname, c_email, c_password) VALUES ('$fname', '$lname', '$email', '$hashPassword')";
 
             if ($conn->query($sql)) {
-                header('location: index.php');
-                echo "<span class='error'>Added Successfully!</span>";
+                $_SESSION['msg'] = "<span id='success'>Account created successfully.</span>";
+                header('location: sign-up.php');
             } else {
                 die("Error");
             }

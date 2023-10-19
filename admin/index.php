@@ -61,6 +61,14 @@ $c_email = $result['c_email'];
                     <i class="far fa-calendar-check"></i>
                     <a href="">Schedules</a>
                 </li>
+                <li>
+                    <i class="fas fa-credit-card"></i>
+                    <a href="">Payment</a>
+                </li>
+                <li>
+                    <i class="fas fa-file-signature"></i>
+                    <a href="">Reports</a>
+                </li>
             </ul>
         </aside>
         <section>

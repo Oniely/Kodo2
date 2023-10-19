@@ -22,6 +22,14 @@ main {
   background-size: cover;
   background-position: center;
 }
+main #err {
+  color: rgb(255, 50, 50);
+  padding: 0 10px;
+}
+main #success {
+  color: greenyellow;
+  padding: 0 10px;
+}
 main .container {
   display: flex;
   flex-direction: column;
@@ -55,14 +63,16 @@ main .container span {
   margin: 0;
   font-family: "League Spartan", sans-serif;
 }
-main .container .p_sign_in, main .container .p_sign_up {
+main .container .p_sign_in,
+main .container .p_sign_up {
   font-size: 1em;
   text-align: center;
   font-family: "League Spartan", sans-serif;
   margin-top: 15px;
   color: #090909;
 }
-main .container .p_sign_in a, main .container .p_sign_up a {
+main .container .p_sign_in a,
+main .container .p_sign_up a {
   text-decoration: none;
 }
 main .container .sign_up {
@@ -184,8 +194,4 @@ main .container .sign_in div input[type=submit]:hover {
 }
 main .container .sign_in div input[type=submit]:active {
   background: #090909;
-}
-main .container .error {
-  color: red;
-  padding: 0 10px;
 }/*# sourceMappingURL=index.css.map */

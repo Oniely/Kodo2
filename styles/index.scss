@@ -23,9 +23,19 @@ main {
     display: grid;
     place-items: center;
 
-    background: url('../img/wall.jpeg') no-repeat;
+    background: url("../img/wall.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
+
+    #err {
+        color: rgb(255, 50, 50);
+        padding: 0 10px;
+    }
+
+    #success {
+        color: greenyellow;
+        padding: 0 10px;
+    }
 
     .container {
         display: flex;
@@ -68,10 +78,11 @@ main {
             font-family: "League Spartan", sans-serif;
         }
 
-        .p_sign_in, .p_sign_up { 
+        .p_sign_in,
+        .p_sign_up {
             font-size: 1em;
             text-align: center;
-            font-family: 'League Spartan', sans-serif;
+            font-family: "League Spartan", sans-serif;
             margin-top: 15px;
             color: $black;
 
@@ -173,7 +184,7 @@ main {
                 height: 5rem;
                 grid-area: span 1;
 
-                &:nth-child(2){
+                &:nth-child(2) {
                     position: relative;
                 }
 
@@ -235,11 +246,6 @@ main {
                     }
                 }
             }
-        }
-
-        .error {
-            color: red;
-            padding: 0 10px;
         }
     }
 }
