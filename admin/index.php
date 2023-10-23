@@ -23,7 +23,7 @@ $c_email = $result['c_email'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Southland College ISI</title>
     <link rel="stylesheet" href="../styles/admin.css">
     <script src="../script/profile_nav.js" defer></script>
 
@@ -95,7 +95,7 @@ $c_email = $result['c_email'];
                             <i class="fas fa-cog"></i>
                         </button>
                         <button class="img_container" id="profile_nav">
-                            <img src="../img/wall.jpeg" alt="img">
+                            <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg" alt="img">
                             <div class="dropdown_nav">
                                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
                                         viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->

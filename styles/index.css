@@ -18,7 +18,7 @@ main {
   height: 100vh;
   display: grid;
   place-items: center;
-  background: url("../img/wall.jpeg") no-repeat;
+  background: url("../img/southland_college_bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
