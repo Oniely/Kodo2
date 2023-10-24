@@ -43,7 +43,7 @@ $c_email = $result['c_email'];
             <ul>
                 <li>
                     <i class="fas fa-home"></i>
-                    <a href="">Dashboard</a>
+                    <a href="./dashboard.php">Dashboard</a>
                 </li>
                 <li>
                     <i class="fas fa-user-graduate"></i>
