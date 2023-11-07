@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#result {
+    position: absolute;
+    top: 3.6rem;
+    right: 2.5rem;
+}
+
+#back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+h1 {
+    color: #4285f4;
+    font-size: 2.1rem;
+}
+
+.rating {
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.rating p {
+    font-size: 2.5rem;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label[for^="bad"],
+label[for^="great"],
+label[for^="good"],
+input[type=text] {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid #4285f4;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+input[type=text] {
+    text-align: start;
+    cursor: auto;
+}
+
+input[type=text]:active {
+    border: 2px solid #3b79db;
+}
+
+label[for^="bad"]:hover ,
+label[for^="verygood"]:hover ,
+label[for^="good"]:hover  {
+    background: #4285f4;
+    color: #f4f4f4;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #3b79db;
+    color: white;
+}
+
+.button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #3b79db;
+}
